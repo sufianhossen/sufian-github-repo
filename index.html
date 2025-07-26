@@ -92,6 +92,68 @@
         flex: 1;
       }
     }
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 0;
+      gap: 40px;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero-content h1 span {
+      color: #f26c1d;
+    }
+
+    .hero-content p {
+      color: #555c70;
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+
+    .hero-image {
+      flex: 1;
+      text-align: right;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        text-align: left;
+        padding: 40px 0;
+      }
+
+      .hero-image {
+        order: 1;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .hero-content {
+        order: 2;
+        width: 100%;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+    }
 </style>
 </head>
 <body>
@@ -109,7 +171,18 @@
         <div class="cart">🛒 Cart ($56)</div>
       </div>
     </nav>
-
-    
+    <section class="hero-section">
+        <div class="hero-content">
+        <h1><strong>ALWAYS <span>FRESH</span><br>FLOWERS</strong></h1>
+        <p>
+          Indulge your senses with the beauty and fragrance of our fresh flower shop.
+          From classic roses to exotic blooms, we offer a wide variety of fresh flowers.
+        </p>
+      </div>
+      <div class="hero-image">
+        <img src="assets/hero-flower.PNG" alt="Fresh Flowers" />
+      </div>
+    </section>
+  </div>
 </body>
 </html>
