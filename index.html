@@ -35,10 +35,81 @@
       margin: auto;
       padding: 10px 40px 60px;
     }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .right-section {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .menu li {
+      font-size: 16px;
+      color: #666;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .menu li:hover {
+      color: #000;
+    }
+
+    .menu li.active {
+      color: #111;
+      font-weight: 600;
+    }
+
+    .cart {
+      font-size: 16px;
+      font-weight: 500;
+      color: #101010;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+      }
+      .right-section {
+        justify-content: flex-end;
+        flex: 1;
+      }
+    }
 </style>
 </head>
-
 <body>
+    <div class="container">
+    <nav class="navbar">
+        <div class="logo">
+        <img src="assets/logo.png" alt="logo">
+      </div>
+      <div class="right-section">
+        <ul class="menu">
+          <li class="active">Home</li>
+          <li>Shop</li>
+          <li>About us</li>
+        </ul>
+        <div class="cart">🛒 Cart ($56)</div>
+      </div>
+    </nav>
+
     
 </body>
 </html>
